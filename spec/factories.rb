@@ -7,7 +7,7 @@ FactoryGirl.define do
     price "199.00"
   end
   factory :item2, class: Item do
-    name "I"
+    name "i"
     description "Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.
     Lorem Ipsum is simply dummy text of the printing and typesetting industry.

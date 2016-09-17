@@ -17,4 +17,15 @@ describe Item do
     second_item = build :item2
     expect(second_item.save).to eq(false)
   end
+
+  it "does works when query passed in" do
+    item = attributes_for(:item1)
+    search_result = Item.text_search(item[:name])
+    expect(search_result).to_not eq(nil)
+  end
+
+  it "doesn't works when query isn't passed in" do
+    search_result = Item.text_search(nil)
+    expect(search_result).to eq([])
+  end
 end

@@ -1,5 +1,13 @@
 <h1>Items</h1>
 
+<%= form_tag items_path, method: :get do %>
+  <p>
+    <%= text_field_tag :query, params[:query] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+
 <div id="items">
-  <%=render @items %>
+    <%=render @items %>
 </div>

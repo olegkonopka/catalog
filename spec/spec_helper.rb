@@ -1,6 +1,7 @@
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'factories.rb'
+ENV['RAILS_ENV'] ||= 'test'
 
 RSpec.configure do |config|
   config.include Rack::Test::Methods
