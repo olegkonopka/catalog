@@ -16,4 +16,13 @@ FactoryGirl.define do
     Lorem Ipsum is simply dummy text of the printing and typesetting industry."
     price "0"
   end
+
+  factory :item_rating1, class: ItemRating do
+    item_id 1
+    rating 3
+  end
+  factory :item_rating2, class: ItemRating do
+    item_id 1
+    rating 10
+  end
 end

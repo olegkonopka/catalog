@@ -9,5 +9,11 @@
 
 
 <div id="items">
-    <%=render @items %>
+  <% @items.each do |item| %>
+    <p>
+      <strong>Name:</strong> <%= link_to "#{item.name}",item %><br>
+      <strong>Description:</strong> <%= item.description %><br>
+      <strong>Price:</strong> <%= item.price %><br>
+    </p>
+  <% end %>
 </div>
